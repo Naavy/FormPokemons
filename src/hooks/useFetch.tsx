@@ -9,7 +9,7 @@ const useFetch = (url?: string) => {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<Error | null>()
 
-  const fetcher = (url: string, method?: string, body?: any, clearForm?: () => void) => {
+  const fetcher = (url: string, method?: string, body?: any) => {
     setIsLoading(true)
     setError(null)
     fetch(url, { method: method, body: JSON.stringify(body) })
@@ -17,7 +17,6 @@ const useFetch = (url?: string) => {
         response.json())
       .then((data) => {
         setData(data.results)
-        clearForm && clearForm()
       })
       .catch((error) => {
         setError(error)
