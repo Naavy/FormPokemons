@@ -1,0 +1,8 @@
+{
+  "type": "cors",
+  "url": "",
+  "status": 200,
+  "ok": true,
+  "statusText": "OK",
+  "body": {}
+}
